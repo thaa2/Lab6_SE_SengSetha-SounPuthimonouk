@@ -48,6 +48,9 @@ public class Subject {
         if(lecturerName == null || lecturerName.trim().isEmpty()){
             throw new IllegalArgumentException ("Lecturer name cannot be null or empty.");
         }
-        this.lecturerName = lecturerName ;
-    }
+        // encapsulate name input in else so as to not input empty string into name
+        else {
+            this.lecturerName = lecturerName ;
+        }
+    } 
 }
