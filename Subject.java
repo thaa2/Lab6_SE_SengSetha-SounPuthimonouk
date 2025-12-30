@@ -14,6 +14,7 @@ public class Subject {
     private String subjectCode;
     private String name;
     private int credits;
+    private String lecturerName;
 
     // ===== Constructor =====
     public Subject(String subjectCode, String name, int credits) {
@@ -41,5 +42,12 @@ public class Subject {
             throw new IllegalArgumentException("Subject name cannot be null or empty.");
         }
         this.name = name;
+    }
+        // Add setLecturername method with null/empty exception
+    public void setLecturerName (String lecturerName){
+        if(lecturerName == null || lecturerName.trim().isEmpty()){
+            throw new IllegalArgumentException ("Lecturer name cannot be null or empty.");
+        }
+        this.lecturerName = lecturerName ;
     }
 }
