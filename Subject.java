@@ -12,14 +12,15 @@ public class Subject {
 
     // ===== Instance variables (private, best practice) =====
     private String subjectCode;
-    private String name;
+    //change from name to subjectName 
+    private String subjectName;
     private int credits;
     private String lecturerName;
 
     //  Default constructor (no parameters)
     public Subject() {
         this.subjectCode = "UNKNOWN";
-        this.name = "Untitled Subject";
+        this.subjectName = "Untitled Subject";
         this.lecturerName = "TBA";
     }
 
@@ -36,7 +37,7 @@ public class Subject {
     }
 
     public String getName() {
-        return name;
+        return subjectName;
     }
 
     public int getCredits() {
@@ -48,7 +49,7 @@ public class Subject {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Subject name cannot be null or empty.");
         }
-        this.name = name;
+        this.subjectName = subjectName;
     }
         // Add setLecturername method with null/empty exception
     public void setLecturerName (String lecturerName){
