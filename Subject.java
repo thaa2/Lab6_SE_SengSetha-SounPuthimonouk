@@ -16,6 +16,13 @@ public class Subject {
     private int credits;
     private String lecturerName;
 
+    //  Default constructor (no parameters)
+    public Subject() {
+        this.subjectCode = "UNKNOWN";
+        this.name = "Untitled Subject";
+        this.lecturerName = "TBA";
+    }
+
     // ===== Constructor =====
     public Subject(String subjectCode, String name, int credits) {
         this.subjectCode = subjectCode;
