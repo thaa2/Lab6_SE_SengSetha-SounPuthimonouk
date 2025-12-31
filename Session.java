@@ -32,20 +32,20 @@ public class Session {
     String getDescription(){
         return description;
     }
-    String getDuration(){
+    int getDuration(){
         return duration;
     }
     
     //setter
     public void setTopic(String session_topic) {
-        if (session_topic == null || sessoin_topic.trim().isEmpty()) {
+        if (session_topic == null || session_topic.trim().isEmpty()) {
             throw new IllegalArgumentException("Subject name cannot be null or empty.");
         }else{
             this.session_topic = session_topic;
         }
     }
     public void setDuration(int duration) {
-        if (duration != 0 && duration >0) {
+        if (duration<=0) {
             throw new IllegalArgumentException("Subject name cannot be null or empty.");
         }else{
             this.session_topic = session_topic;
